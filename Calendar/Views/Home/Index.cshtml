@@ -1,0 +1,143 @@
+﻿
+<!DOCTYPE html>
+
+@using Calendar
+@model IEnumerable<Google.Apis.Calendar.v3.Data.Event>
+
+@{
+    Layout = null;
+}
+
+
+<html>
+<head>
+    <center>
+        <p>
+            <font size="5">
+                </h1> Google Calendar API Servisine Hoşgeldiniz </h1>
+            </font>
+            <style>
+                body {
+                    background-color: black;
+                    color: white;
+                }
+            </style>
+        </p>
+    </center>
+    <head>
+        <style>
+            img {
+                border-radius: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="https://i.hizliresim.com/a7bhqrw.png" alt="Calendar" width="72" height="72"><br><br />Toplantı Oluşturmak İçin gereken Bilgileri Giriniz
+        <br><br />
+
+    </body>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
+        <table>
+            <tr>
+                <td>Toplantı Adı: </td>
+                <td><input type="text" id="toplantiAdi" name="toplantiAdi" /></td>
+            </tr>
+            <tr>
+                <td>Toplanti Açıklaması: </td>
+                <td><input type="text" id="aciklama" name="aciklama" /></td>
+            </tr>
+            <tr>
+                <td>Başlangıç Tarihi: </td>
+                <td><input type="datetime-local" id="baslangicTarihi" name="baslangicTarihi" /></td>
+            </tr>
+            <tr>
+                <td>Bitiş Tarihi: </td>
+                <td><input type="datetime-local" id="bitisTarihi" name="bitisTarihi" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submitButton" value="Toplantı Oluştur" /></td>
+            </tr>
+        </table>
+        <hr />
+
+
+
+
+        @*buradan itibaren kopyaladım tatil günlerini getir butonu oluşturdum*@
+
+        @ViewBag.Name
+        <hr />
+        <body>
+            <img src="https://i.hizliresim.com/9opjuml.png" alt="Calendar" width="90" height="90"><br><br />Toplantıları Listelemek İçin Butona Tıklayın
+        </body>
+        <input type="submit" name="submitButton" value="Toplantı Listele" />
+
+        @ViewBag.Name
+        <hr />
+        <body>
+            <img src="https://i.hizliresim.com/a7bhqrw.png" alt="Calendar" width="72" height="72"><br><br />Tatil Günlerini Listelemek İçin Butona Tıklayın
+        </body>
+        <input type="submit" name="submitButton" value="Tatil günü getir" />
+
+    </form>
+
+    @if (Model != null)
+    {
+        <table class="table">
+            <tr>
+                <th>
+                    Toplantı Adı
+                </th>
+                <th>
+                    Açıklama
+                </th>
+                <th>
+                    Başlangıç Tarihi
+                </th>
+                <th>
+                    Bitiş Tarihi
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Summary
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        @if(item.Start.DateTime != null)
+                        {
+                            @item.Start.DateTime
+                        }
+                        else
+                        {
+                            @item.Start.Date
+                        }
+                    </td>
+                    <td>
+                        @if (item.End.DateTime != null)
+                        {
+                            @item.End.DateTime
+                        }
+                        else
+                        {
+                            @item.End.Date
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+
+
+
+</body>
+</html>

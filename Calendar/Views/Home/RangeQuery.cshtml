@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home">
+        <label>Başlangıç Tarihi: </label>
+        <input type="datetime-local" id="rangeStart" name="queryStartDate" />
+        <label>Bitiş Tarihi: </label>
+        <input type="datetime-local" id="rangeEnd" name="queryEndDate" />
+        <input type="submit" name="submitButton" value="Kaç Gün Çalışacağım" />
+    </form>
+    
+    <br/>
+
+
+
+</body>
+</html>

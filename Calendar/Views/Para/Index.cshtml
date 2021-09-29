@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+@using Calendar.Models
+@model EftModel
+
+@{
+    Layout = null;
+}
+
+
+<html>
+<body>
+
+    <form method="post" enctype="multipart/form-data" asp-controller="ParaController" asp-action="Index">
+
+        <tr>
+            <td>Başlangıç Tarihi: </td>
+            <td><input type="datetime-local" id="tarih" name="tarih" /></td>
+        </tr>
+        <tr>
+            <input type="submit" name="submitButton" value="Eft Hesapla" />
+        </tr>
+    </form>
+
+    @if (Model != null)
+    {
+        <td>EFT gerçekleşecek tarih: @Model.EftTarih @Model.EftTarih.DayOfWeek</td>
+    }
+</body>
+</html>
