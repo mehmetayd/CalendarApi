@@ -6394,11 +6394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Xyztech\\Desktop\\GoogleCalendar-main\\GoogleCalendar-main\\Calendar\\Calendar\\Calendar.csproj",
+      "projectUniqueName": "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\Calendar\\Calendar.csproj",
       "projectName": "Calendar",
-      "projectPath": "C:\\Users\\Xyztech\\Desktop\\GoogleCalendar-main\\GoogleCalendar-main\\Calendar\\Calendar\\Calendar.csproj",
+      "projectPath": "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\Calendar\\Calendar.csproj",
       "packagesPath": "C:\\Users\\Xyztech\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Xyztech\\Desktop\\GoogleCalendar-main\\GoogleCalendar-main\\Calendar\\Calendar\\obj\\",
+      "outputPath": "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\Calendar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

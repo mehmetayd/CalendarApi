@@ -24,25 +24,25 @@ namespace Calendar.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(string toplantiAdi, string aciklama, DateTime baslangicTarihi, DateTime bitisTarihi, string submitButton)
+        public IActionResult Index(string toplantiAdi, string aciklama, DateTime queryStartDate, DateTime queryEndDate, string submitButton)
         {
             switch(submitButton)
             {
                 case "Toplantı Oluştur":
-                    if (toplantiAdi == "null" || aciklama == "null" || baslangicTarihi.ToString() == "1.01.0001 00:00:00" || bitisTarihi.ToString() == "1.01.0001 00:00:00")
+                    if (toplantiAdi == "null" || aciklama == "null" || queryStartDate.ToString() == "1.01.0001 00:00:00" || queryEndDate.ToString() == "1.01.0001 00:00:00")
                     {
                         ViewBag.Name = "Lütfen girilen değerleri kontrol ediniz.";
                         return View();
                     }
 
-                    ToplantiOlustur(toplantiAdi, aciklama, baslangicTarihi, bitisTarihi);
+                    ToplantiOlustur(toplantiAdi, aciklama, queryStartDate, queryEndDate);
 
                     break;
                 case "Toplantı Listele":
                     return View(ToplantiListele());
 
-                //case "Tatil günü getir":
-                //    return View(TatilGunuGetir(baslangicTarihi,bi));
+                case "Tatil günü getir":
+                    return View(TatilGunuGetir(queryStartDate, queryEndDate));
             }
 
             return View();
@@ -178,7 +178,7 @@ namespace Calendar.Controllers
             {
                 var startDate = DateTime.Parse(holidayEvent.Start.Date);
                 var endDate = DateTime.Parse(holidayEvent.End.Date);
-
+                
                 while(startDate != endDate)
                 {
                     if (!holidays.Contains(startDate))

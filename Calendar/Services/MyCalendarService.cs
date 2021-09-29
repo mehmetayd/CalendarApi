@@ -15,7 +15,10 @@ namespace Calendar.Services
     {
         private string jsonFile = "ezoteric-stream-318615-91d29934ede4.json";
         private string calendarId = @"mehmet.ayd.3411@gmail.com";
-        private string tatilGunleriCalendarId = @"tr.turkish#holiday@group.v.calendar.google.com";
+        private string CalendarId()
+        {
+            return @"tr.turkish#holiday@group.v.calendar.google.com";
+        }
 
         private string[] Scopes = { CalendarService.Scope.Calendar };
 
@@ -130,13 +133,15 @@ namespace Calendar.Services
         // TatilGunleriniGetir yaptım!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         public Events TatilGunleriniGetir(DateTime queryStartDate, DateTime queryEndDate)
         {
-            EventsResource.ListRequest listRequest = service.Events.List(tatilGunleriCalendarId);
-            listRequest.TimeMin = queryStartDate;
-            listRequest.TimeMax = queryEndDate;
+            EventsResource.ListRequest listRequest = service.Events.List(CalendarId());
+            listRequest.TimeMin = new DateTime(2021, 1, 1, 0, 0, 0);
+            //listRequest.TimeMin = queryStartDate;
+            //listRequest.TimeMax = queryEndDate;
             listRequest.ShowDeleted = false;
             listRequest.SingleEvents = true;
-            //listRequest.MaxResults = 10;
+            listRequest.MaxResults = 50;
             listRequest.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
+            //belirlenen tarih aralıklarındaki tatil günleri getirilecek.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             // List events.
             Events events = listRequest.Execute();
