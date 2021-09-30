@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\Calendar\\Calendar.csproj": {}
+    "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\CalendarApi\\Calendar\\Calendar.csproj": {}
   },
   "projects": {
-    "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\Calendar\\Calendar.csproj": {
+    "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\CalendarApi\\Calendar\\Calendar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\Calendar\\Calendar.csproj",
+        "projectUniqueName": "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\CalendarApi\\Calendar\\Calendar.csproj",
         "projectName": "Calendar",
-        "projectPath": "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\Calendar\\Calendar.csproj",
-        "packagesPath": "C:\\Users\\Xyztech\\.nuget\\packages\\",
-        "outputPath": "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\Calendar\\obj\\",
+        "projectPath": "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\CalendarApi\\Calendar\\Calendar.csproj",
+        "packagesPath": "C:\\Users\\mehme\\.nuget\\packages\\",
+        "outputPath": "C:\\Codebase\\Github\\mehmetayd\\CalendarApi\\CalendarApi\\Calendar\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Xyztech\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mehme\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

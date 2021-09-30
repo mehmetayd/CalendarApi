@@ -105,6 +105,8 @@ namespace Calendar.Controllers
             return true;
         }
 
+        //onur abiyle deneme
+
         [HttpGet]
         public IActionResult SingleQuery()
         {
