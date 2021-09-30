@@ -82,7 +82,7 @@ namespace Calendar.Controllers
         {
             return myCalendarService.TatilGunleriniGetir(queryStartDate, queryEndDate).Items;
         }
-
+        //eft kontrole göre uyarla 
         public bool EFTControl(DateTime tarih)
         {
             List<Event> tatilGunleri = new List<Event>(); // TatilGunuGetir().ToList();
