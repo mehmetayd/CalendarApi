@@ -89,6 +89,7 @@ namespace Calendar.Controllers
 
             List<Event> filtered = tatilGunleri.FindAll(e => e.Start.Date.Equals(tarih.ToString("yyyy-MM-dd")));
 
+
             if (filtered.Count != 0 || tarih.Date.DayOfWeek == DayOfWeek.Saturday || tarih.Date.DayOfWeek.ToString().Equals("Sunday"))
             {
                 //tarih = tarih.AddDays(1);
@@ -104,9 +105,6 @@ namespace Calendar.Controllers
 
             return true;
         }
-
-        //onur abiyle deneme
-
         [HttpGet]
         public IActionResult SingleQuery()
         {
@@ -166,11 +164,18 @@ namespace Calendar.Controllers
             {
                 if (loopDate.DayOfWeek == DayOfWeek.Saturday || loopDate.DayOfWeek == DayOfWeek.Sunday)
                     holidays.Add(loopDate);
-
                 rangeList.Add(loopDate);
 
                 loopDate = loopDate.AddDays(1);
             }
+
+            //if (holidays.tostring().equals)
+
+            //    var evedays = querystartdate;
+            //while (evedays <= queryenddate)
+            //{
+
+            //}
 
             // google service query
             //var holidayEvents = TatilGunuGetir(queryStartDate, queryEndDate);
