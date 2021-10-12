@@ -143,27 +143,29 @@ namespace Calendar.Services
             listRequest.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
             //belirlenen tarih aralıklarındaki tatil günleri getirilecek.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             // List events.
-            //Events events = listRequest.Execute();
+            Events events = listRequest.Execute();
+            return events;
+
 
 
             //var eveDays = events;
 
-            var rangeList = new List<DateTime>();
-            var holidays = new List<DateTime>();
+            //var rangeList = new List<DateTime>();
+            //var holidays = new List<DateTime>();
 
-            queryStartDate = queryStartDate.Date;
-            queryEndDate = queryEndDate.Date;
+            //queryStartDate = queryStartDate.Date;
+            //queryEndDate = queryEndDate.Date;
 
-            // handle range population and weekends
-            var loopDate = queryStartDate;
-            while (loopDate <= queryEndDate)
-            {
-                if (loopDate. == DayOfWeek.Saturday || loopDate.DayOfWeek == DayOfWeek.Sunday)
-                    holidays.Add(loopDate);
-                rangeList.Add(loopDate);
+            //// handle range population and weekends
+            //var loopDate = queryStartDate;
+            //while (loopDate <= queryEndDate)
+            //{
+            //    if (loopDate.DayOfWeek == DayOfWeek.Saturday || loopDate.DayOfWeek == DayOfWeek.Sunday)
+            //        holidays.Add(loopDate);
+            //    rangeList.Add(loopDate);
 
-                loopDate = loopDate.AddDays(1);
-            }
+            //    loopDate = loopDate.AddDays(1);
+            //}
 
             //if (listRequest.Fields.Equals("arifesi") || listRequest.Fields.Equals("gecesi")
             //    {
@@ -173,8 +175,8 @@ namespace Calendar.Services
             //if (listRequest.Summary.Equals("arifesi") || listRequest.Summary.Equals("gecesi"))
             //{
 
-                
-            }
+
+        }
             //if (events.Items.ToString().Equals("arifesi") || events.Items.ToString().Equals("gecesi"))
             //{
             //    eveDays = eveDays.
@@ -183,8 +185,7 @@ namespace Calendar.Services
             //}
 
             //var eveDays = events.Items.ToString().summary ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-            return events;
-        }
+        
 
         //public bişeListesi ResmiTatilGunleriniGetir
         // getirip göstericen

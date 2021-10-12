@@ -6408,6 +6408,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://package.xyzteknoloji.com:8624/nuget/XyzNuGet/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
